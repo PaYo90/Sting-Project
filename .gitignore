@@ -8,4 +8,5 @@
 /var/
 /vendor/
 /.idea/
+/komendy terminala.txt
 ###< symfony/framework-bundle ###
