@@ -4,17 +4,20 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class LandingController
+class LandingController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="landingpage")
      */
     public function landingpage()
     {
-        return new Response('OMG! My first page already! woho.');
+        return $this->render('smartadmin/test.html.twig', [
+            'treść' => "strona główna"
+        ]);
     }
 
     /**
